@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IntroActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="intro">Intro</string>
+    <string name="main">main</string>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:gravity="center">
+
+	<ProgressBar android:id="@+id/imageViewProgressBar"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:max="100" />
+
+	<ImageView android:id="@+id/imageView"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="invisible" />
+	
+	<LinearLayout android:id="@+id/imageViewLinearLayout"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:visibility="invisible">
+	    
+	    <ImageButton android:id="@+id/imageViewRefreshButton"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:src="@drawable/btn_refresh"
+	    	android:layout_gravity="center"
+	    	android:visibility="visible" 
+	    	android:background="#00000000"/>
+	    
+	</LinearLayout>
+	
+</FrameLayout>
