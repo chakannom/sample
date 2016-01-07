@@ -1,13 +1,13 @@
 package com.chakannom.demo.exception.exception;
 
-public class DemoExceptionHandlerException extends RuntimeException {
+public class DemoException extends RuntimeException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	public DemoExceptionHandlerException(String message) {
+	public DemoException(String message) {
 		super(message);
 	}
 

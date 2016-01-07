@@ -9,23 +9,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.chakannom.demo.exception.domain.DemoDTO;
-import com.chakannom.demo.exception.exception.DemoExceptionHandlerException;
+import com.chakannom.demo.exception.exception.DemoException;
 import com.chakannom.demo.exception.exception.ErrorDetail;
 import com.chakannom.demo.exception.exception.ErrorDetail.Error;
 
 @RestController
-public class DemoRestController {
+@RequestMapping(value = "/ExceptionHandler")
+public class DemoRestExceptionHandlerController {
 
-	@RequestMapping(value = "/ExceptionHandler", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public DemoDTO getDemoExceptionHandler() throws Exception {
 		DemoDTO demoDto = new DemoDTO();
 		if (demoDto.getId() == "Demo ID")
-			throw new DemoExceptionHandlerException("ExceptionHandler");
+			throw new DemoException("ExceptionHandler");
 
 		return demoDto;
 	}
 	
-	@ExceptionHandler(DemoExceptionHandlerException.class)
+	@ExceptionHandler(DemoException.class)
 	public ErrorDetail demoExceptionHandler(HttpServletRequest request, Exception exception) {
 		ErrorDetail errorDetail = new ErrorDetail();
 		Error error = errorDetail.new Error();
@@ -35,5 +36,4 @@ public class DemoRestController {
 		errorDetail.setError(error);
 		return errorDetail;
 	}
-	
 }
