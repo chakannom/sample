@@ -14,14 +14,14 @@ import com.chakannom.demo.exception.exception.ErrorDetail;
 import com.chakannom.demo.exception.exception.ErrorDetail.Error;
 
 @RestController
-public class DemoController {
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public DemoDTO getDemo() throws Exception {
+public class DemoRestController {
+
+	@RequestMapping(value = "/ExceptionHandler", method = RequestMethod.GET)
+	public DemoDTO getDemoExceptionHandler() throws Exception {
 		DemoDTO demoDto = new DemoDTO();
 		if (demoDto.getId() == "Demo ID")
-			throw new DemoExceptionHandlerException("ID");
-		
+			throw new DemoExceptionHandlerException("ExceptionHandler");
+
 		return demoDto;
 	}
 	
