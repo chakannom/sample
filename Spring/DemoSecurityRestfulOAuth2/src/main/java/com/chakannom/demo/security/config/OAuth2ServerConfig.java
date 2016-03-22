@@ -52,7 +52,8 @@ public class OAuth2ServerConfig {
 
 		@Override
 		public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-			endpoints.userDetailsService(loginService)
+			endpoints.pathMapping("/oauth/token", "/oauth/login") // Path 변경부분
+				.userDetailsService(loginService)
 				.authenticationManager(authenticationManager);
 		}
 
