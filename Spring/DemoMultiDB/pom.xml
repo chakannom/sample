@@ -8,11 +8,11 @@
 		<version>1.3.3.RELEASE</version>
 	</parent>
 
-	<groupId>com.chakanframework</groupId>
-	<artifactId>spring-boot-mybatis-multi</artifactId>
+	<groupId>com.chakannom.demo.multidatabase</groupId>
+	<artifactId>DemoMultiDB</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ChaKanFramework-MultiDataSource</name>
-	<description>ChaKanFramework MultiDataSource</description>
+	<name>DemoMultiDB</name>
+	<description>DemoMultiDB</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
